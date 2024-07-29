@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clinometer</title>
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <div id="top">
+        <h1 id="telop">Digital Clinometer</h1>
+        <button id="start_btn" onclick="start()">Start</button>
+    </div>
+    <div id="main">
+        <div id="header">Digital Clinometer</div>
+        <div id="needle"></div>
+        <img src="./protractor.png" id="protractor">
+        <img src="./level1.png" id="level">
+        <div id="result_area">
+            <div id="result">
+                <label>偏角：<select id="result_dropbox">
+                    <option value="e">E</option>
+                    <option value="w">W</option>
+                 </select>
+                 <input type="number" id="henkaku" class="result_box">°
+                </label><br>
+                <label>走向：<input type="text" id="alpha" class="result_box" disabled></label><br>
+                <label>傾斜：<input type="text" id="beta" class="result_box" disabled></label><br>
+            </div>
+            <input type="button" class="btn" id="hold_btn" value="Lock" onclick="hold()">
+            <input type="button" class="btn" id="reset_btn" value="Reset" onclick="reset()">
+            <input type="button" class="btn" id="record_btn" disabled value="Record" onclick="record()">
+        </div>
+    </div>
+    <div id="record">
+        <table id="target_table">
+            <tr>
+                <th>Date</th>
+                <th>Note</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <script src="./home.js"></script>
+</body>
+</html>

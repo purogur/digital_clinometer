@@ -1,0 +1,141 @@
+body{
+    font-family: 'Comic Sans MS',sans-serif;
+}
+#top{
+    text-align: center;
+}
+/*オープニングテロップ*/
+#telop{
+    animation-name: floatIn;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    font-size: 50px;
+}
+@keyframes floatIn{
+    0%{
+        opacity: 0;
+        top: 300px;
+    }
+    100%{
+        opacity: 1;
+        top: 150px;
+    }
+}
+/*スタートボタン*/
+#start_btn{
+    font-family: 'Comic Sans MS',sans-serif;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    position: relative;
+    top: 150px;
+    opacity: 0;
+    width: 170px;
+    height: 60px;
+    font-size: 30px;
+    transition: 0.5s;
+    border: double 3px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+#start_btn:active{
+    cursor: pointer;
+    width: 200px;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#main{
+    display: none;
+    text-align: center;
+}
+#header{
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+    background-color: rgb(235, 235, 235);
+    border-bottom: double 5px;
+    border-top: double 5px;
+}
+#needle{
+    background: linear-gradient(90deg, black 0%, black 50%, red 50%, red 100%);
+    width: 248px;
+    height: 3px;
+    position: relative;
+    top: 192px;
+    margin: auto;
+    z-index: 3;
+}
+#protractor{
+    width: 360px;
+    height: 360px;
+    position: relative;
+    top: 10px; 
+}
+#level{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: auto;
+    opacity: 0.5;
+    z-index: 2;
+}
+#meter{
+    position: relative;
+    top: 0px;
+}
+#result_area{
+    position: relative;
+    top: -50px;
+}
+.result_box{
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    margin: 6px;
+}
+#result_dropbox{
+    width: 38px;
+    height: 36px;
+    font-size: 17px;
+    text-align: center;
+}
+#henkaku{
+    width: 100px;
+}
+.btn{
+    margin: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+}
+#record_btn{
+    width: 210px;
+    height: 40px;
+}
+#record{
+    display: none;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+table th, table td{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
